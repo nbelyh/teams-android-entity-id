@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script>
+microsoftTeams.initialize();
+microsoftTeams.getContext(teamsContext => {
+  document.getElementById("output").innerHTML = teamsContext.entityId;
+  document.getElementById("clickme").addEventListener("click", () => {
+    var encodedContext = encodeURI(`{"channelId": "${teamsContext.channelId}"}`);
+    var appId = 'e0d43d31-8de2-4c98-b150-e61ec0e4597e';
+    var entityId = teamsContext.entityId;
+    var url = `https://teams.microsoft.com/l/entity/${appId}/${entityId}?context=${encodedContext}`;
+    microsoftTeams.executeDeepLink(url);
+  });
+});
+microsoftTeams.appInitialization.notifySuccess();
+</script>
+</head>
+<body>
+<div id="output"></div>
+<button id="clickme">click me</button>
+</body>
+</html>

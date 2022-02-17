@@ -1,0 +1,45 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.11",
+    "version": "10.0",
+    "id": "e0d43d31-8de2-4c98-b150-e61ec0e4597e",
+    "packageName": "android-entity-id-issue",
+    "developer": {
+        "name": "Nikolay Belykh",
+        "websiteUrl": "https://unmanagedvisio.com",
+        "privacyUrl": "https://unmanagedvisio.com",
+        "termsOfUseUrl": "https://unmanagedvisio.com"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "android-entity-id-issue",
+        "full": ""
+    },
+    "description": {
+        "short": "shows android entity id issue",
+        "full": "shows android entity id issue"
+    },
+    "accentColor": "#FFFFFF",
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://unmanagedvisio.com/upload/teams-android-entity-id/config.html",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team"
+            ],
+            "context": [
+                "channelTab"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "unmanagedvisio.com"
+    ]
+}

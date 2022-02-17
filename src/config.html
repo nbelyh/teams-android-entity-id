@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script>
+microsoftTeams.initialize();
+microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+  microsoftTeams.settings.setSettings({
+    contentUrl: 'https://unmanagedvisio.com/upload/teams-android-entity-id/content.html',
+    suggestedDisplayName: "TEST",
+    entityId: "111111"
+  });
+  saveEvent.notifySuccess();
+});
+
+microsoftTeams.settings.setValidityState(true);
+microsoftTeams.appInitialization.notifySuccess();
+
+</script>
+</head>
+<body>
+Please click "Save"
+</body>
+</html>
